@@ -14,18 +14,24 @@ li {
 } 
 /* css reset */
 
-div{
+main{
     width: 60%;
     height: 100vh;
     margin-left: 20%;
 }
 
-h1{
-    text-align: center;   
-    border-style: dotted;
-    margin: 20px;
-    padding: 20px;
+header{
+    width: 100%;
+    height: 90px;
+    background-color: darkblue;
+    color: white;
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+    padding: 0 30px;
 }
+
+
 
 /* nav */
 nav{
@@ -60,14 +66,14 @@ nav ul li:hover{
 /* nav_end */
 
 /* div > ul > li */
-div > ul > li{
+section > ul > li{
     text-align: center;
     background-color: beige;
     margin: 10px 40px;
     padding: 10px;
 }
 
-div > ul > li:hover{
+section > ul > li:hover{
     background-color: orange;
     color: white;
 }
