@@ -1,0 +1,33 @@
+#btDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+
+button{
+    width: 150px;
+}
+
+img{
+    padding: 20px;
+}
+
+#btDiv > div{
+    padding: 10px;
+    height: 40%;
+    width: 70%;
+}
+
+.inner{
+    border: none;
+    padding: 10px;
+}
+
+.dice{
+    flex-direction: column;
+    border: none;
+    width: 30%;
+}
+
