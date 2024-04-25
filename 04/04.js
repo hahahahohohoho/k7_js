@@ -8,34 +8,27 @@
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    // 1. DOM이 생성된 후에 DOM에서 이미지와 버튼을 가져오기
+    
+    const msg = document.querySelector('#msg')
     const comImg = document.querySelector('#com')
     const userImg = document.querySelector('#user')
-    const bt1 = document.querySelector('#bt1')
-    const bt2 = document.querySelector('#bt2')
-    const bt3 = document.querySelector('#bt3')
-    const bt4 = document.querySelector('#bt4')
-    const bt5 = document.querySelector('#bt5')
-    const bt6 = document.querySelector('#bt6')
+    const bts = document.querySelectorAll('button')
 
-    const btCreate = (bt, n) => {
+    for(let bt of bts){
         bt.addEventListener('click', ()=>{
-            const m = Math.floor(Math.random()*6 +1);
-            comImg.setAttribute('src',`./img/${m}.png`);
-            comImg.setAttribute('alt',`${m}`);
-            userImg.setAttribute('src',`./img/${n}.png`);
-            userImg.setAttribute('alt',`${n}`);
-        })     
+            const user = parseInt(bt.textContent.charAt(0))
+            const com = Math.floor(Math.random()*6 +1)
+            
+            comImg.setAttribute('src',`./img/${com}.png`)
+            comImg.setAttribute('alt',`computer dice num ${com}.`)
+            userImg.setAttribute('src',`./img/${user}.png`)
+            userImg.setAttribute('alt',`user dice num ${com}`)
+            
+            console.log(com, user)
+
+            if(user === com) msg.innerHTML = '결과가 일치합니다.'
+            else msg.innerHTML = '결과가 불일치합니다.'
+            // ===은 데이터 타입까지 동일한 것만 True로 반환
+        });
     }
-
-    btCreate(bt1, 1)
-    btCreate(bt2, 2)
-    btCreate(bt3, 3)
-    btCreate(bt4, 4)
-    btCreate(bt5, 5)
-    btCreate(bt6, 6)
-
-
-
-
 });

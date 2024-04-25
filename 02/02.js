@@ -20,6 +20,8 @@ document.addEventListener("DOMContentLoaded", ()=>{
     btCreate(bt1, 'bt11', bt1Txt, btDiv);
     btCreate(bt2, 'bt12', bt2Txt, btDiv);
 
+    brCreate(bt1,);
+
 
 
     // bt1.addEventListener('click', ()=>{     //클릭하면 안녕하세요 출력, 안녕하세요 있을 때 삭제
