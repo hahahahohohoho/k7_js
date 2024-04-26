@@ -1,9 +1,11 @@
-document.addEventListener("DOMContentLoaded", ()=>{
+document.addEventListener("DOMContentLoaded", () => {
     // 1. dom에서 제어할 노드를 가져오기
     const bt = document.querySelector('#bt1')
     const img = document.querySelector('img')
     const input = document.querySelector('input')
-    
+    const title = document.querySelector('#title')
+
+
 
     /*
     2. 버튼이 눌러지면 
@@ -21,32 +23,94 @@ document.addEventListener("DOMContentLoaded", ()=>{
     */
     let n
     let flag = false;
+    let cl = 0
+    let imgName;
 
-    bt.addEventListener('click', (e)=>{
+    bt.textContent = '숫자를 생성하세요'
+    input.style.display = 'none'
+
+    bt.addEventListener('click', (e) => {
         //폼태그 사용 시 다시 호출되지 않도록
         e.preventDefault
 
-        if(!flag){ // flag == false
+        if (!flag) { // flag == false
             flag = true;
-            n = Math.floor(Math.random()*100)+1
+            n = Math.floor(Math.random() * 100) + 1
             console.log(n)
+
+            title.innerHTML = `UpDown 게임 남은 횟수 : 5`
+            img.setAttribute('src', `./img/what.png`)
+            input.style.display = 'inline'
+            bt.textContent = '확인'
+            input.value = '';
         }
-        
-        if(input.value == ''){
+
+
+        if (input.value == '') {
             alert('값을 입력하세요.')
             input.focus();
             return;
         }
 
-        if(input.value > 100 | input.value < 1 ){
-            alert('1부터 100사이의 값을 입력하세요')
+
+        if (input.value == '') {
+            alert('값을 입력하세요.')
             input.focus();
             return;
         }
 
-        if(input.value > n) img.setAttribute('src','./img/down.png')
-        else if(input.value < n) img.setAttribute('src','./img/up.png')
-    
-    }) 
+        if (parseInt(input.value) > 100 | parseInt(input.value) < 1) {
+            alert('1부터 100사이의 값을 입력하세요')
+            input.value = ""
+            input.focus();
+            return;  //함수를 종료시키려고 넣음
+        }
 
+
+        //한번할때마다 기회가 줄고 다 줄어들면 실패 alert
+        const op = () => {
+            cl++
+            title.innerHTML = `UpDown 게임 남은 횟수 : ${5 - cl}`
+            if (cl > 4) {
+                cl = 0
+                flag = false;
+                alert('실패했습니다.')
+                imgName = 'what'
+                input.style.display = 'none' // input 박스 안보이기
+                bt.innerHTML = '<p1>숫자를 생성해주세요</p1>'
+                title.innerHTML = `UpDown 게임 남은 횟수 : 5`
+            };
+        }
+
+
+
+
+        if (parseInt(input.value) > n) {
+            imgName = 'down';
+            op();
+
+        }
+        else if (parseInt(input.value) < n) {
+            imgName = 'up';
+            op();
+        }
+        else {
+            imgName = 'good'
+            input.style.display = 'none' // input 박스 안보이기
+            alert('정답입니다.')
+            title.innerHTML = `UpDown 게임`
+            bt.textContent = '숫자를 생성해주세요' //캡션바꾸기 
+            cl = 0
+            flag = false;//flag를 false로변경
+        }
+
+
+
+        if (imgName === 'up' || imgName === 'down') {
+            input.value = ''
+            input.focus
+        }
+
+        img.setAttribute('src', `./img/${imgName}.png`)
+    })
 })

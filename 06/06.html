@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../01/01.css">
+    <link rel="stylesheet" href="./06.css">
+    <script src="./06.js"></script>
+    <title>단위환산</title>
+</head>
+
+<body>
+    <main>
+        <header>
+            <h1>단위환산</h1>
+            <p class="button"><a href="../index.html">홈</a></p>
+        </header>
+        <article>
+            <section>
+                <div id="left">
+                    <select name="섭씨온도" id="sel1">
+                        <option value="°C">섭씨온도(°C)</option>
+                        <option value="°F">화씨온도(°F)</option>
+                    </select>
+                    <div class="temp">
+                        <input type="number" id="txt1">
+                        <label for="txt1" id="lb1">°C</label> 
+                    </div>
+                </div>
+                <div id="right">
+                    <select name="섭씨온도" id="sel2">
+                        <option value="°F">화씨온도(°F)</option>
+                        <option value="°C">섭씨온도(°C)</option>
+                    </select>
+                    <div class="temp">
+                        <input type="number" id="txt2", readonly>
+                        <label for="txt2" id="lb2">°F</label>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+</body>
+
+</html>

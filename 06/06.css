@@ -1,0 +1,31 @@
+#right, #left {
+  flex-direction: column;
+  border: none;
+  width: 40%;
+}
+
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 250px;
+  background-color: beige;
+  margin: 20px 0;
+}
+
+select, input {
+  padding: 10px;
+  margin: 30px;
+  font-size: large;
+  height: 40px;
+}
+
+.temp {
+  border: none
+}
+
+#txt2{
+  background-color: wheat;
+}
