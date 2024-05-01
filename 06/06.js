@@ -24,13 +24,17 @@ document.addEventListener('DOMContentLoaded',()=>{
         show(sel1, sel2, lb1, lb2)
     })
 
+    sel2.addEventListener('change',()=>{
+        show(sel2, sel1, lb2, lb1)
+    })
+
     // 3. user에게 값을 입력 받아 오른쪽에 변환
     txt1.addEventListener('change', ()=>{
         if(sel1.value == '°C' & sel2.value =='°F')
             txt2.value = (txt1.value *1.8 +32).toFixed(2); 
         else if(sel1.value == '°F' & sel2.value =='°C')        
             txt2.value = ((txt1.value -32)*5/9).toFixed(2);
-        else (sel1.value == sel2.value)
+        else sel1.value == sel2.value
     })
     
 

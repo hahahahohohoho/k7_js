@@ -1,0 +1,49 @@
+article{
+  background-color: #eff6ff;
+  justify-content: center;
+}
+
+.dv8, .dv81, .dv82{
+  width: 80%;
+  background-color: #eff6ff;
+  border: none;
+  display: flex;
+  justify-content: center;
+}
+
+.bt8, .bt81, .bt82 {
+  width: 130px;
+  height: 40px;
+  text-align: center;
+}
+
+#h{
+  display: flex;
+  justify-content: center;
+}
+
+input{
+  height: 60px;
+  width: 600px;
+  margin-top: 10px;
+  text-align: center;
+  font-size: x-large;
+}
+
+section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#h{
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#m{
+  padding-bottom: 20px;
+}
