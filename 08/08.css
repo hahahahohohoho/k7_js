@@ -3,19 +3,6 @@ article{
   justify-content: center;
 }
 
-.dv8, .dv81, .dv82{
-  width: 80%;
-  background-color: #eff6ff;
-  border: none;
-  display: flex;
-  justify-content: center;
-}
-
-.bt8, .bt81, .bt82 {
-  width: 130px;
-  height: 40px;
-  text-align: center;
-}
 
 #h{
   display: flex;
@@ -36,6 +23,11 @@ section{
   justify-content: center;
   align-items: center;
 }
+
+.spdv{
+  
+}
+
 
 #h{
   height: 200px;

@@ -1,0 +1,39 @@
+.spdv{
+    height: 300px;
+}
+
+span{
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+    margin: 0.5rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.sp0{
+    background-color: red;
+}
+.sp1{
+    background-color: orange;
+}
+.sp2{
+    background-color:rgb(255, 230, 0);
+}
+.sp3{
+    background-color: green
+}
+.sp4{
+    background-color: blue;
+}
+.sp5{
+    background-color: navy;
+}
+.spbonus{
+    background-color: purple;
+}
+#spplus{
+    color: black;
+}
